@@ -5,7 +5,7 @@ Static website (HTML/CSS/JS, no build step) for Oscar's Auto Center in Ocala, FL
 Pages: `index.html` (Home), `services.html`, `about.html`, `gallery.html`, `reviews.html`, `contact.html`.
 
 ## Photos
-Put your own photos in `images/`. See `images/README.md` for the file names.
+Photos live in `images/` (upscaled from the design mockups). See `images/README.md` to replace them.
 
 ## Phone, address, hours
 These appear in the header, footer and contact page of each HTML file. Use find-and-replace across all files
