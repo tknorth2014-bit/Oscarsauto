@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Oscar's Auto Center | Auto Repair in Ocala, FL</title>
+  <meta name="description" content="Oscar's Auto Center is Ocala, Florida's trusted auto repair shop. Brakes, engine diagnostics, A/C, oil changes, tires, transmissions and more. Honest pricing, fast turnaround.">
+  <meta name="theme-color" content="#111317">
+  <meta property="og:title" content="Oscar's Auto Center | Auto Repair in Ocala, FL">
+  <meta property="og:description" content="Honest, fast, professional auto repair in Ocala, Florida.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top info bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="topbar__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        <span data-biz="address">3140 SW 7th St, Ocala, FL 34474</span>
+      </span>
+      <span class="topbar__item topbar__hours">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg>
+        <span data-biz="hoursShort">Mon–Sat: Open 24 Hours · Sun: Closed</span>
+      </span>
+      <a class="topbar__item topbar__phone" data-biz-href="tel" href="tel:+13520000000">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span data-biz="phone">(352) 000-0000</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Oscar's Auto Center home">
+        <span class="logo__mark">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l17 9.8v20.4L24 44 7 34.2V13.8L24 4z" fill="currentColor"/><path d="M24 14a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" fill="#111317"/></svg>
+        </span>
+        <span class="logo__text">
+          <strong>OSCAR'S</strong>
+          <small>AUTO CENTER</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#appointment" class="btn btn--primary nav__cta">Book Appointment</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <picture class="hero__bg">
+        <source media="(max-width: 640px)" srcset="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&h=1400&q=80 1x, https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&h=2100&q=80 2x">
+        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1920&q=80"
+             srcset="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1280&q=80 1280w, https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1920&q=80 1920w, https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=2560&q=80 2560w"
+             sizes="100vw" alt="Mechanic working on a car at Oscar's Auto Center" fetchpriority="high">
+      </picture>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="eyebrow">Ocala's Trusted Auto Repair Shop</p>
+        <h1>Quality Auto Repair<br><span>You Can Count On</span></h1>
+        <p class="hero__lead">From routine maintenance to major repairs, the team at Oscar's Auto Center keeps Ocala drivers on the road with honest pricing, expert technicians and fast turnaround.</p>
+        <div class="hero__actions">
+          <a href="#appointment" class="btn btn--primary btn--lg">Schedule Service</a>
+          <a href="tel:+13520000000" data-biz-href="tel" class="btn btn--outline btn--lg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Call <span data-biz="phone">(352) 000-0000</span>
+          </a>
+        </div>
+        <ul class="hero__badges">
+          <li><strong>18+</strong><span>Years in Ocala</span></li>
+          <li><strong>All</strong><span>Makes &amp; Models</span></li>
+          <li><strong>100%</strong><span>Honest Estimates</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Feature strip -->
+    <section class="features">
+      <div class="container features__grid">
+        <div class="feature">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1.5 15.5-4-4 1.4-1.4 2.6 2.6 6.1-6.1 1.4 1.4-7.5 7.5z"/></svg></div>
+          <div><h3>Experienced Technicians</h3><p>Experienced, trained mechanics who treat your car like their own.</p></div>
+        </div>
+        <div class="feature">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg></div>
+          <div><h3>Fast Turnaround</h3><p>Most repairs completed same day so you're back on the road quickly.</p></div>
+        </div>
+        <div class="feature">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.3-.6-3-1.2-3-2.1 0-1.1 1-1.9 2.7-1.9 1.8 0 2.4.8 2.5 2.1h2.2c-.1-1.7-1.1-3.3-3.2-3.8V3h-3v2.2c-1.9.4-3.5 1.7-3.5 3.6 0 2.3 1.9 3.5 4.7 4.1 2.5.6 3 1.5 3 2.4 0 .7-.5 1.8-2.7 1.8-2.1 0-2.9-.9-3-2.1H5.3c.1 2.2 1.8 3.5 3.7 3.9V21h3v-2.1c1.9-.4 3.5-1.5 3.5-3.6 0-2.8-2.4-3.8-4.7-4.4z"/></svg></div>
+          <div><h3>Fair, Upfront Pricing</h3><p>Clear estimates before any work begins. No surprises, ever.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">What We Do</p>
+          <h2>Our Auto Repair Services</h2>
+          <p>Complete care for cars, trucks and SUVs — foreign and domestic.</p>
+        </div>
+
+        <div class="services">
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></div>
+            <h3>Brake Repair</h3>
+            <p>Pads, rotors, calipers and brake fluid service to keep you stopping safely.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M7 4h10v2h-2v2h3l2 2v3h2v-2h1v6h-1v-2h-2v3h-3l-2 2H8l-2-2H4v-3H2v3H1V9h1v3h2V9l2-1h3V6H7V4z"/></svg></div>
+            <h3>Engine Diagnostics</h3>
+            <p>Check engine light on? Advanced computer diagnostics pinpoint the problem fast.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M12 2 9 5h2v4.3L7.3 7.2 6.3 9l3.7 2.1H6l-3 3h4.3L4 16.3l1 1.7 3.7-2.1-1 3.7 1.9.5 1.4-5.2V22h2v-7.1l1.4 5.2 1.9-.5-1-3.7 3.7 2.1 1-1.7-3.3-2.2H21l-3-3h-4l3.7-2.1-1-1.7L13 9.3V5h2l-3-3z"/></svg></div>
+            <h3>A/C &amp; Heating</h3>
+            <p>Beat the Florida heat with A/C recharge, leak detection and compressor repair.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M12 2s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11zm0 15a3 3 0 0 1-3-3h2a1 1 0 0 0 1 1v2z"/></svg></div>
+            <h3>Oil Change</h3>
+            <p>Conventional and full synthetic oil changes with a free multi-point inspection.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3a7 7 0 0 1 6.9 6h-3.1a4 4 0 0 0-2.8-2.8V5.1L12 5zm-1 .1v3.1A4 4 0 0 0 8.2 11H5.1A7 7 0 0 1 11 5.1zM5.1 13h3.1a4 4 0 0 0 2.8 2.8v3.1A7 7 0 0 1 5.1 13zm7.9 5.9v-3.1a4 4 0 0 0 2.8-2.8h3.1a7 7 0 0 1-5.9 5.9z"/></svg></div>
+            <h3>Tires &amp; Alignment</h3>
+            <p>Tire sales, rotation, balancing and precision wheel alignment.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L15 3h-4l-.4 2.9c-.6.3-1.2.6-1.7 1l-2.5-1-2 3.5L6.6 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1L11 21h4l.4-2.9c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5-2.2-1.6zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg></div>
+            <h3>Transmission</h3>
+            <p>Transmission fluid service, diagnostics, repair and rebuilds.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M16 4h-2V2h-4v2H8C6.9 4 6 4.9 6 6v14c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3 14h-2v-4H9l4-7v4h2l-2 7z"/></svg></div>
+            <h3>Battery &amp; Electrical</h3>
+            <p>Battery testing and replacement, alternators, starters and wiring.</p>
+          </article>
+          <article class="service">
+            <div class="service__icon"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-6h8l2 6h3v2h-2v4h-3v-2H8v2H5v-4H3v-2zm5.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.4 8 8.3 11h7.4l-1.1-3H9.4z"/></svg></div>
+            <h3>Suspension &amp; Steering</h3>
+            <p>Shocks, struts, ball joints and tie rods for a smooth, controlled ride.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--dark" id="about">
+      <div class="container about">
+        <div class="about__media">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&h=1400&q=80"
+               srcset="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&h=820&q=80 700w, https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&h=1400&q=80 1200w"
+               sizes="(max-width: 900px) 100vw, 50vw" alt="Technician inspecting an engine" loading="lazy" width="1200" height="1400">
+          <div class="about__badge"><strong>18+</strong><span>Years of<br>Experience</span></div>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow">About Oscar's</p>
+          <h2>Locally Owned. Ocala Proud.</h2>
+          <p>Oscar's Auto Center has been serving Ocala and Marion County drivers for nearly two decades. We built our reputation the old-fashioned way — doing the job right, explaining what your vehicle really needs, and charging a fair price.</p>
+          <p>Whether it's a quick oil change or a major engine repair, every customer gets the same honest service and attention to detail.</p>
+          <ul class="checklist">
+            <li>Free estimates on all repairs</li>
+            <li>Foreign &amp; domestic vehicles</li>
+            <li>Quality parts with warranty</li>
+            <li>Friendly, knowledgeable staff</li>
+          </ul>
+          <a href="#appointment" class="btn btn--primary btn--lg">Get a Free Estimate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat"><strong data-count="18">0</strong><span>Years in Business</span></div>
+        <div class="stat"><strong data-count="8" data-suffix="+">0</strong><span>Repair Services</span></div>
+        <div class="stat"><strong data-count="24" data-suffix=" Hrs">0</strong><span>Open Mon–Sat</span></div>
+        <div class="stat"><strong data-count="6" data-suffix=" Days">0</strong><span>Open Each Week</span></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Testimonials</p>
+          <h2>What Our Customers Say</h2>
+        </div>
+        <!-- PLACEHOLDER REVIEWS: replace with real customer reviews (e.g. copied from Google) before launch -->
+        <div class="reviews">
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Honest and fast. They found the problem other shops missed and charged me less than I expected. My go-to shop in Ocala.”</blockquote>
+            <figcaption><span class="avatar">M</span><div><strong>Michael R.</strong><small>Ocala, FL</small></div></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“My A/C went out in the middle of summer. Oscar's had me back on the road the same day. Great people and great service.”</blockquote>
+            <figcaption><span class="avatar">J</span><div><strong>Jessica T.</strong><small>Ocala, FL</small></div></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“They explained everything before doing any work and never pushed services I didn't need. Highly recommend.”</blockquote>
+            <figcaption><span class="avatar">C</span><div><strong>Carlos G.</strong><small>Belleview, FL</small></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="cta">
+      <img class="cta__bg" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80"
+           srcset="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&h=900&q=80 800w, https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80 1920w"
+           sizes="100vw" alt="" loading="lazy">
+      <div class="cta__overlay"></div>
+      <div class="container cta__content">
+        <h2>Car Trouble? We've Got You Covered.</h2>
+        <p>Call now or book online — we'll get you back on the road.</p>
+        <div class="hero__actions">
+          <a href="tel:+13520000000" data-biz-href="tel" class="btn btn--light btn--lg">Call <span data-biz="phone">(352) 000-0000</span></a>
+          <a href="#appointment" class="btn btn--outline btn--lg">Book Online</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment + Contact -->
+    <section class="section" id="appointment">
+      <div class="container contact">
+        <div class="contact__form-wrap">
+          <p class="eyebrow">Request Service</p>
+          <h2>Book an Appointment</h2>
+          <p>Fill out the form and we'll contact you to confirm your appointment.</p>
+          <form class="form" id="apptForm" novalidate>
+            <div class="form__row">
+              <label>Full Name<input type="text" name="name" autocomplete="name" required></label>
+              <label>Phone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+            </div>
+            <div class="form__row">
+              <label>Email<input type="email" name="email" autocomplete="email"></label>
+              <label>Vehicle (Year / Make / Model)<input type="text" name="vehicle" placeholder="e.g. 2018 Toyota Camry"></label>
+            </div>
+            <div class="form__row">
+              <label>Service Needed
+                <select name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Brake Repair</option>
+                  <option>Engine Diagnostics</option>
+                  <option>A/C &amp; Heating</option>
+                  <option>Oil Change</option>
+                  <option>Tires &amp; Alignment</option>
+                  <option>Transmission</option>
+                  <option>Battery &amp; Electrical</option>
+                  <option>Suspension &amp; Steering</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>Preferred Date<input type="date" name="date"></label>
+            </div>
+            <label>Describe the Problem<textarea name="message" rows="4"></textarea></label>
+            <button type="submit" class="btn btn--primary btn--lg btn--block">Request Appointment</button>
+            <p class="form__note" id="formNote" role="status"></p>
+          </form>
+        </div>
+
+        <aside class="contact__info" id="contact">
+          <h3>Visit Our Shop</h3>
+          <ul class="info-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              <div><strong>Address</strong><a data-biz-href="map" href="https://maps.google.com/?q=3140+SW+7th+St+Ocala+FL+34474" target="_blank" rel="noopener"><span data-biz="address">3140 SW 7th St, Ocala, FL 34474</span></a></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+              <div><strong>Phone</strong><a data-biz-href="tel" href="tel:+13520000000"><span data-biz="phone">(352) 000-0000</span></a></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg>
+              <div>
+                <strong>Hours</strong>
+                <table class="hours" id="hoursTable"></table>
+              </div>
+            </li>
+          </ul>
+          <div class="map">
+            <iframe id="mapFrame" title="Map to Oscar's Auto Center" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=3140%20SW%207th%20St%2C%20Ocala%2C%20FL%2034474&z=15&output=embed"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--footer">
+          <span class="logo__mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l17 9.8v20.4L24 44 7 34.2V13.8L24 4z" fill="currentColor"/><path d="M24 14a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" fill="#111317"/></svg></span>
+          <span class="logo__text"><strong>OSCAR'S</strong><small>AUTO CENTER</small></span>
+        </a>
+        <p>Honest, professional auto repair for Ocala and Marion County.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Brake Repair</a></li>
+          <li><a href="#services">Engine Diagnostics</a></li>
+          <li><a href="#services">A/C &amp; Heating</a></li>
+          <li><a href="#services">Oil Change</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><span data-biz="address">3140 SW 7th St, Ocala, FL 34474</span></li>
+          <li><a data-biz-href="tel" href="tel:+13520000000"><span data-biz="phone">(352) 000-0000</span></a></li>
+          <li><span data-biz="hoursShort">Mon–Sat: Open 24 Hours · Sun: Closed</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">© <span id="year"></span> Oscar's Auto Center · Ocala, Florida. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky action bar -->
+  <div class="mobile-bar">
+    <a href="tel:+13520000000" data-biz-href="tel" class="mobile-bar__btn mobile-bar__btn--call">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      Call Now
+    </a>
+    <a href="#appointment" class="mobile-bar__btn mobile-bar__btn--book">Book Service</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
