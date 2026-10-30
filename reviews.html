@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Customer Reviews | Oscar's Auto Center, Ocala FL</title>
+<meta name="description" content="See what Ocala drivers say about Oscar's Auto Center.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="Customer Reviews | Oscar's Auto Center, Ocala FL">
+<meta property="og:description" content="See what Ocala drivers say about Oscar's Auto Center.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+/* Use images/<name>.jpg when present, otherwise a stock photo, otherwise a styled placeholder. */
+function imgFallback(el) {
+  var f = el.getAttribute("data-fallback");
+  if (f) { el.removeAttribute("data-fallback"); el.src = f; return; }
+  el.onerror = null; el.style.visibility = "hidden";
+  if (el.parentNode) el.parentNode.classList.add("img-missing");
+}
+</script>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo" aria-label="Oscar's Auto Center home"><span class="logo__name">OSCAR'S</span><svg class="logo__swoosh" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12C60 3 140 1 198 4L196 7C140 5 70 7 2 12z"/></svg><span class="logo__sub">AUTO <em>CENTER</em></span></a>
+    <nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="reviews.html" class="is-active" aria-current="page">Reviews</a><a href="contact.html">Contact</a></nav>
+    <a href="tel:+13528670799" class="btn btn--red btn--pill header__call">Call Now</a>
+    <a href="tel:+13528670799" class="header__call-icon" aria-label="Call (352) 867-0799"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="page-hero__media"><img src="images/hero-reviews.jpg" data-fallback="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2000&q=80" alt="Mechanic working on an engine" fetchpriority="high" decoding="async" onerror="imgFallback(this)"></div>
+  <div class="container page-hero__content">
+    <h1>Customer<br><span>Reviews</span></h1>
+    <p>Real customers. Real experiences.<br>See what people in Ocala are saying about Oscar's Auto Center.</p>
+  </div>
+</section>
+<section class="section section--tight section--grey">
+  <div class="container">
+    <div class="rating">
+      <div class="rating__score"><svg class="g-logo" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg><span class="rating__divider"></span><strong>4.9</strong>
+        <div><div class="stars stars--lg" aria-label="4.9 out of 5 stars">★★★★★</div><small>Based on 150+ Google Reviews</small></div>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Oscar%27s+Auto+Center+Ocala+FL" target="_blank" rel="noopener" class="btn btn--red btn--lg">View All Reviews on Google <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg></a>
+    </div>
+    <!-- PLACEHOLDER REVIEWS: replace with real customer reviews before launch -->
+    <div class="reviews">
+      <figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>&ldquo;Oscar and his team always take care of my vehicles. Honest, fair prices and great work. Highly recommend!&rdquo;</blockquote><figcaption><strong>Mike R.</strong><small>Ocala, FL</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>&ldquo;Best auto repair shop in Ocala! They explained everything and got my truck back on the road quickly.&rdquo;</blockquote><figcaption><strong>Sarah L.</strong><small>Ocala, FL</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>&ldquo;Very professional and knowledgeable. Fair pricing and excellent service.&rdquo;</blockquote><figcaption><strong>Javier M.</strong><small>Ocala, FL</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>&ldquo;Oscar's is the only place I trust with my car. Always honest and does great work.&rdquo;</blockquote><figcaption><strong>Amanda T.</strong><small>Ocala, FL</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>&ldquo;Great service, friendly staff and fast turnaround. Highly recommend!&rdquo;</blockquote><figcaption><strong>Chris D.</strong><small>Ocala, FL</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>&ldquo;They fixed my AC and had me back on the road the same day. Awesome shop!&rdquo;</blockquote><figcaption><strong>Patricia S.</strong><small>Ocala, FL</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+<section class="call-banner">
+  <div class="call-banner__media"><img src="images/banner.jpg" data-fallback="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1400&q=80" alt="Mechanic working on an engine" loading="lazy" decoding="async" onerror="imgFallback(this)"></div>
+  <div class="call-banner__content">
+    <h2>Join Our Happy<br>Customers Today</h2>
+    <a href="tel:+13528670799" class="btn btn--red btn--xl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Call (352) 867-0799</a>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand"><a href="index.html" class="logo" aria-label="Oscar's Auto Center home"><span class="logo__name">OSCAR'S</span><svg class="logo__swoosh" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12C60 3 140 1 198 4L196 7C140 5 70 7 2 12z"/></svg><span class="logo__sub">AUTO <em>CENTER</em></span></a><p>Quality auto repair and maintenance for Ocala and the surrounding area. Honest work, fair prices.</p></div>
+    <div><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Services</h4><ul><li><a href="services.html">Oil Changes</a></li><li><a href="services.html">Brake Service</a></li><li><a href="services.html">Engine Repair</a></li><li><a href="services.html">A/C &amp; Heating</a></li><li><a href="services.html">Diagnostics</a></li></ul></div>
+    <div><h4>Contact</h4><ul class="footer__contact">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><a href="tel:+13528670799">(352) 867-0799</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><a href="https://www.google.com/maps/dir/?api=1&destination=3140+SW+7th+St,+Ocala,+FL+34474" target="_blank" rel="noopener">3140 SW 7th St<br>Ocala, FL 34474</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg><span>Mon–Fri: 8:00 AM – 5:30 PM<br>Sat: 8:00 AM – 12:00 PM<br>Sun: Closed</span></li>
+    </ul></div>
+  </div>
+  <div class="footer__bottom"><div class="container">© <span class="js-year">2026</span> Oscar's Auto Center · Ocala, Florida</div></div>
+</footer>
+<div class="mobile-bar">
+  <a href="tel:+13528670799" class="mobile-bar__btn mobile-bar__btn--call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Call Now</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=3140+SW+7th+St,+Ocala,+FL+34474" target="_blank" rel="noopener" class="mobile-bar__btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Directions</a>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

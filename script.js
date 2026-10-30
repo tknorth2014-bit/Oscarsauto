@@ -1,171 +1,86 @@
-/* ==========================================================
-   BUSINESS INFO — edit these values and the whole site updates.
-   ========================================================== */
-const BUSINESS = {
-  phone: "(352) 000-0000",            // TODO: real shop phone number
-  address: "3140 SW 7th St, Ocala, FL 34474", // TODO: confirm address
-  email: "",                           // shop email that receives appointment requests
-  formEndpoint: "",                    // optional: Formspree/Getform URL to receive requests without email
-  hours: [                             // Sunday first
-    ["Sunday", "Closed"],
-    ["Monday", "Open 24 Hours"],
-    ["Tuesday", "Open 24 Hours"],
-    ["Wednesday", "Open 24 Hours"],
-    ["Thursday", "Open 24 Hours"],
-    ["Friday", "Open 24 Hours"],
-    ["Saturday", "Open 24 Hours"],
-  ],
-  hoursShort: "Mon–Sat: Open 24 Hours · Sun: Closed",
-};
-
-(function applyBusinessInfo() {
-  const tel = "tel:+1" + BUSINESS.phone.replace(/\D/g, "").slice(-10);
-  const map = "https://maps.google.com/?q=" + encodeURIComponent(BUSINESS.address);
-
-  document.querySelectorAll("[data-biz]").forEach((el) => {
-    const value = BUSINESS[el.dataset.biz];
-    if (typeof value === "string") el.textContent = value;
-  });
-  document.querySelectorAll('[data-biz-href="tel"]').forEach((el) => (el.href = tel));
-  document.querySelectorAll('[data-biz-href="map"]').forEach((el) => (el.href = map));
-
-  const frame = document.getElementById("mapFrame");
-  if (frame) frame.src = "https://maps.google.com/maps?q=" + encodeURIComponent(BUSINESS.address) + "&z=15&output=embed";
-
-  const table = document.getElementById("hoursTable");
-  if (table) {
-    const today = new Date().getDay();
-    table.innerHTML = BUSINESS.hours
-      .map(([day, time], i) => `<tr${i === today ? ' class="is-today"' : ""}><td>${day}</td><td>${time}</td></tr>`)
-      .join("");
-  }
-
-  document.getElementById("year").textContent = new Date().getFullYear();
-})();
-
 /* Mobile menu */
 const header = document.getElementById("header");
 const toggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 
 function setMenu(open) {
+  if (open) nav.style.top = header.getBoundingClientRect().bottom + "px";
   toggle.setAttribute("aria-expanded", String(open));
   toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  if (open) nav.style.setProperty("--nav-top", header.getBoundingClientRect().bottom + "px");
   nav.classList.toggle("is-open", open);
   document.body.classList.toggle("menu-open", open);
 }
 toggle.addEventListener("click", () => setMenu(!nav.classList.contains("is-open")));
-nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
-window.addEventListener("resize", () => window.innerWidth > 900 && setMenu(false));
+window.addEventListener("resize", () => window.innerWidth > 920 && setMenu(false));
 
-/* Header shadow + active nav link */
-const sections = [...document.querySelectorAll("main section[id]")];
-const navLinks = [...nav.querySelectorAll('a:not(.btn)')];
+document.querySelectorAll(".js-year").forEach((el) => (el.textContent = new Date().getFullYear()));
 
-function onScroll() {
-  header.classList.toggle("is-scrolled", window.scrollY > 10);
-  const y = window.scrollY + window.innerHeight * 0.35;
-  let current = "home";
-  sections.forEach((s) => { if (s.offsetTop <= y) current = s.id; });
-  if (current === "appointment") current = "contact";
-  navLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + current));
-}
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
+/* Highlight today's row in the hours table */
+const today = String(new Date().getDay());
+document.querySelectorAll(".hours tr[data-days]").forEach((tr) => {
+  if (tr.dataset.days.split(",").includes(today)) tr.classList.add("is-today");
+});
 
-/* Reveal on scroll + count-up stats */
-const revealTargets = document.querySelectorAll(".service, .review, .feature, .about__text, .about__media, .stat, .section__head");
-revealTargets.forEach((el) => el.classList.add("reveal"));
-
-function countUp(el) {
-  const target = Number(el.dataset.count);
-  const suffix = el.dataset.suffix || "";
-  const start = performance.now();
-  const dur = 1400;
-  (function tick(now) {
-    const p = Math.min((now - start) / dur, 1);
-    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString() + suffix;
-    if (p < 1) requestAnimationFrame(tick);
-  })(start);
-}
-
+/* Fade sections in as they scroll into view */
+const revealEls = document.querySelectorAll(".card, .review, .value, .quick__item, .split__text, .about__text, .about__media, .info, .gallery__item");
 if ("IntersectionObserver" in window) {
+  revealEls.forEach((el) => el.classList.add("reveal"));
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add("is-visible");
-      const num = e.target.querySelector("[data-count]");
-      if (num) countUp(num);
-      io.unobserve(e.target);
+      if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
     });
-  }, { threshold: 0.15 });
-  revealTargets.forEach((el) => io.observe(el));
-} else {
-  revealTargets.forEach((el) => el.classList.add("is-visible"));
-  document.querySelectorAll("[data-count]").forEach(countUp);
+  }, { threshold: 0.12 });
+  revealEls.forEach((el) => io.observe(el));
 }
 
-/* Hide any image that fails to load so the dark section background shows instead */
-document.querySelectorAll("img").forEach((img) => {
-  const hide = () => (img.style.visibility = "hidden");
-  if (img.complete && img.naturalWidth === 0) hide();
-  else img.addEventListener("error", hide);
-});
+/* Gallery filters + lightbox */
+const gallery = document.getElementById("gallery");
+if (gallery) {
+  const items = [...gallery.querySelectorAll(".gallery__item")];
+  const filters = document.querySelectorAll(".filter");
 
-/* Appointment form */
-const form = document.getElementById("apptForm");
-const note = document.getElementById("formNote");
+  filters.forEach((btn) => btn.addEventListener("click", () => {
+    filters.forEach((b) => { b.classList.toggle("is-active", b === btn); b.setAttribute("aria-pressed", String(b === btn)); });
+    const cat = btn.dataset.filter;
+    items.forEach((it) => it.classList.toggle("is-hidden", cat !== "all" && it.dataset.cat !== cat));
+  }));
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  note.className = "form__note";
-  note.textContent = "";
+  const box = document.getElementById("lightbox");
+  const boxImg = box.querySelector("img");
+  let index = 0;
 
-  let valid = true;
-  form.querySelectorAll("[required]").forEach((field) => {
-    const ok = field.value.trim() !== "";
-    field.classList.toggle("is-invalid", !ok);
-    if (!ok) valid = false;
+  const visible = () => items.filter((it) => !it.classList.contains("is-hidden") && !it.classList.contains("img-missing"));
+  function show(i) {
+    const list = visible();
+    if (!list.length) return;
+    index = (i + list.length) % list.length;
+    const src = list[index].querySelector("img");
+    boxImg.src = src.currentSrc || src.src;
+    boxImg.alt = src.alt;
+  }
+  function close() { box.hidden = true; document.body.classList.remove("menu-open"); }
+
+  items.forEach((it) => it.addEventListener("click", () => {
+    if (it.classList.contains("img-missing")) return;
+    show(visible().indexOf(it));
+    box.hidden = false;
+    document.body.classList.add("menu-open");
+  }));
+  box.querySelector(".lightbox__close").addEventListener("click", close);
+  box.querySelector(".lightbox__prev").addEventListener("click", () => show(index - 1));
+  box.querySelector(".lightbox__next").addEventListener("click", () => show(index + 1));
+  box.addEventListener("click", (e) => e.target === box && close());
+  document.addEventListener("keydown", (e) => {
+    if (box.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(index - 1);
+    if (e.key === "ArrowRight") show(index + 1);
   });
-  if (!valid) {
-    note.classList.add("is-err");
-    note.textContent = "Please fill in your name, phone and the service needed.";
-    return;
-  }
 
-  const data = Object.fromEntries(new FormData(form));
-
-  if (BUSINESS.formEndpoint) {
-    try {
-      const res = await fetch(BUSINESS.formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error();
-      form.reset();
-      note.classList.add("is-ok");
-      note.textContent = "Thank you! We'll call you shortly to confirm your appointment.";
-    } catch {
-      note.classList.add("is-err");
-      note.textContent = "Something went wrong. Please call us at " + BUSINESS.phone + ".";
-    }
-    return;
-  }
-
-  if (BUSINESS.email) {
-    const body = [
-      `Name: ${data.name}`, `Phone: ${data.phone}`, `Email: ${data.email}`,
-      `Vehicle: ${data.vehicle}`, `Service: ${data.service}`, `Preferred date: ${data.date}`,
-      "", data.message,
-    ].join("\n");
-    window.location.href = `mailto:${BUSINESS.email}?subject=${encodeURIComponent("Appointment Request – " + data.service)}&body=${encodeURIComponent(body)}`;
-    note.classList.add("is-ok");
-    note.textContent = "Your email app is opening to send the request.";
-    return;
-  }
-
-  note.classList.add("is-ok");
-  note.textContent = "Thanks! To lock in your appointment, please call us at " + BUSINESS.phone + ".";
-});
+  let startX = 0;
+  box.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX), { passive: true });
+  box.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+  });
+}

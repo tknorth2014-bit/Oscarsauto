@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Us | Oscar's Auto Center, Ocala FL</title>
+<meta name="description" content="Oscar's Auto Center is a local Ocala auto repair shop built on honest service, quality repairs and fair pricing.">
+<meta name="theme-color" content="#0b0b0c">
+<meta property="og:title" content="About Us | Oscar's Auto Center, Ocala FL">
+<meta property="og:description" content="Oscar's Auto Center is a local Ocala auto repair shop built on honest service, quality repairs and fair pricing.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+/* Use images/<name>.jpg when present, otherwise a stock photo, otherwise a styled placeholder. */
+function imgFallback(el) {
+  var f = el.getAttribute("data-fallback");
+  if (f) { el.removeAttribute("data-fallback"); el.src = f; return; }
+  el.onerror = null; el.style.visibility = "hidden";
+  if (el.parentNode) el.parentNode.classList.add("img-missing");
+}
+</script>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo" aria-label="Oscar's Auto Center home"><span class="logo__name">OSCAR'S</span><svg class="logo__swoosh" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12C60 3 140 1 198 4L196 7C140 5 70 7 2 12z"/></svg><span class="logo__sub">AUTO <em>CENTER</em></span></a>
+    <nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html" class="is-active" aria-current="page">About</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a></nav>
+    <a href="tel:+13528670799" class="btn btn--red btn--pill header__call">Call Now</a>
+    <a href="tel:+13528670799" class="header__call-icon" aria-label="Call (352) 867-0799"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="page-hero__media"><img src="images/hero-about.jpg" data-fallback="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=2000&q=80" alt="Technician working on a vehicle" fetchpriority="high" decoding="async" onerror="imgFallback(this)"></div>
+  <div class="container page-hero__content">
+    <h1>About Oscar's<br><span>Auto Center</span></h1>
+    <p>Quality Work. Honest Service. Local People.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container about">
+    <div class="about__text">
+      <h2>A Local Shop<br>You Can Trust</h2>
+      <p>Oscar's Auto Center is proud to serve Ocala, FL and the surrounding community with reliable, affordable and honest auto repair services. With years of experience, we make it our mission to keep your vehicle running safely and smoothly.</p>
+      <a href="tel:+13528670799" class="btn btn--red btn--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Call Now (352) 867-0799</a>
+    </div>
+    <div class="about__media"><img src="images/shop.jpg" data-fallback="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1400&q=80" alt="Oscar's Auto Center shop building" loading="lazy" decoding="async" onerror="imgFallback(this)"></div>
+  </div>
+  <div class="container values">
+    <div class="value"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zM5 6.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm14 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM12 12.5c3.3 0 6 1.6 6 4V19H6v-2.5c0-2.4 2.7-4 6-4zm-7 .5c.4 0 .8 0 1.2.1A4.6 4.6 0 0 0 4.5 16.5V19H0v-2c0-2.2 2.2-4 5-4zm14 0c2.8 0 5 1.8 5 4v2h-4.5v-2.5c0-1.4-.6-2.5-1.7-3.4.4-.1.8-.1 1.2-.1z"/></svg><h3>Experienced Team</h3><p>Skilled and knowledgeable mechanics</p></div><div class="value"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1.5 15.5-4-4 1.4-1.4 2.6 2.6 6.1-6.1 1.4 1.4-7.5 7.5z"/></svg><h3>Honest Service</h3><p>Straightforward diagnostics and fair pricing</p></div><div class="value"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L15 3h-4l-.4 2.9c-.6.3-1.2.6-1.7 1l-2.5-1-2 3.5L6.6 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1L11 21h4l.4-2.9c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5-2.2-1.6zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg><h3>Quality Repairs</h3><p>We use quality parts and proven techniques</p></div><div class="value"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.2 5.3 9 8.5a1.6 1.6 0 0 0 2.2 2.3l2.4-2.3 5.6 5.6 1.4-1.4V7L17 4l-4.8 1.3zM1.4 7.2V13l7.1 7.1a1.5 1.5 0 0 0 2.1-2.1l.7.7a1.5 1.5 0 0 0 2.1-2.1l.7.7a1.5 1.5 0 0 0 2.1-2.1l.7.7a1.5 1.5 0 0 0 2.1-2.1l-5.6-5.6-1.7 1.6a3.2 3.2 0 0 1-4.5-4.5l1.9-1.9L7 3.3 1.4 7.2z"/></svg><h3>Community Focused</h3><p>Proudly serving Ocala and surrounding areas</p></div>
+  </div>
+</section>
+<section class="call-banner">
+  <div class="call-banner__media"><img src="images/banner.jpg" data-fallback="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1400&q=80" alt="Mechanic working on an engine" loading="lazy" decoding="async" onerror="imgFallback(this)"></div>
+  <div class="call-banner__content">
+    <h2>&ldquo;Keeping Ocala<br>On The Road&rdquo;</h2>
+    <a href="tel:+13528670799" class="btn btn--red btn--xl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Call (352) 867-0799</a>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand"><a href="index.html" class="logo" aria-label="Oscar's Auto Center home"><span class="logo__name">OSCAR'S</span><svg class="logo__swoosh" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12C60 3 140 1 198 4L196 7C140 5 70 7 2 12z"/></svg><span class="logo__sub">AUTO <em>CENTER</em></span></a><p>Quality auto repair and maintenance for Ocala and the surrounding area. Honest work, fair prices.</p></div>
+    <div><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Services</h4><ul><li><a href="services.html">Oil Changes</a></li><li><a href="services.html">Brake Service</a></li><li><a href="services.html">Engine Repair</a></li><li><a href="services.html">A/C &amp; Heating</a></li><li><a href="services.html">Diagnostics</a></li></ul></div>
+    <div><h4>Contact</h4><ul class="footer__contact">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><a href="tel:+13528670799">(352) 867-0799</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><a href="https://www.google.com/maps/dir/?api=1&destination=3140+SW+7th+St,+Ocala,+FL+34474" target="_blank" rel="noopener">3140 SW 7th St<br>Ocala, FL 34474</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg><span>Mon–Fri: 8:00 AM – 5:30 PM<br>Sat: 8:00 AM – 12:00 PM<br>Sun: Closed</span></li>
+    </ul></div>
+  </div>
+  <div class="footer__bottom"><div class="container">© <span class="js-year">2026</span> Oscar's Auto Center · Ocala, Florida</div></div>
+</footer>
+<div class="mobile-bar">
+  <a href="tel:+13528670799" class="mobile-bar__btn mobile-bar__btn--call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Call Now</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=3140+SW+7th+St,+Ocala,+FL+34474" target="_blank" rel="noopener" class="mobile-bar__btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Directions</a>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

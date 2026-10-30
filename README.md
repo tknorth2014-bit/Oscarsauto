@@ -1,15 +1,15 @@
 # Oscar's Auto Center – Website
 
-A static website (HTML/CSS/JS, no build step) for Oscar's Auto Center in Ocala, FL.
+Static website (HTML/CSS/JS, no build step) for Oscar's Auto Center in Ocala, FL.
 
-## Edit business info
-Open `script.js` and change the `BUSINESS` block at the top: phone, address, hours, email.
-Every phone link, map, and hours table on the site updates from there.
+Pages: `index.html` (Home), `services.html`, `about.html`, `gallery.html`, `reviews.html`, `contact.html`.
 
 ## Photos
-The photos are stock images served from Unsplash. To use your own shop photos, put them in an
-`images/` folder and change the `src`/`srcset` URLs in `index.html`. Use photos at least
-2000px wide for the hero/banner and 1200px wide for the About photo so they stay sharp.
+Put your own photos in `images/`. See `images/README.md` for the file names.
+
+## Phone, address, hours
+These appear in the header, footer and contact page of each HTML file. Use find-and-replace across all files
+(for example, replace `(352) 867-0799` and `+13528670799`).
 
 ## Deploy to Vercel
 1. Go to https://vercel.com/new and import this GitHub repo.
